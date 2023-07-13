@@ -3,6 +3,13 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      unconditional-invoking:
+        description: '手动部署'
+        type: boolean
+        required: true
+        default: true
 permissions:
   contents: read
 
